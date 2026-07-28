@@ -1,0 +1,14 @@
+{
+  "name": "1-backend",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "juego": "node juego.js"
+  },
+  "keywords": [],
+  "author": "David Antonio van Overbeek Crusells (https://davidvanoverbeek.netlify.app/)",
+  "license": "ISC",
+  "type": "commonjs"
+}
