@@ -1,0 +1,13 @@
+{
+  "name": "02-csv",
+  "version": "0.0.1",
+  "description": "Conversor de CSV a JSON",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "David Antonio van Overbeek Crusells (https://davidvanoverbeek.netlify.app/)",
+  "license": "ISC",
+  "type": "commonjs"
+}

@@ -1,0 +1,152 @@
+[
+  {
+    "Title": "The Legend of Zelda: Breath of the Wild",
+    "Release Date": "2017-03-03",
+    "Platform": "Nintendo Switch"
+  },
+  {
+    "Title": "Super Mario Odyssey",
+    "Release Date": "2017-10-27",
+    "Platform": "Nintendo Switch"
+  },
+  {
+    "Title": "Minecraft",
+    "Release Date": "2011-11-18",
+    "Platform": "PC"
+  },
+  {
+    "Title": "Grand Theft Auto V",
+    "Release Date": "2013-09-17",
+    "Platform": "PlayStation 3"
+  },
+  {
+    "Title": "The Witcher 3: Wild Hunt",
+    "Release Date": "2015-05-19",
+    "Platform": "PC"
+  },
+  {
+    "Title": "Red Dead Redemption 2",
+    "Release Date": "2018-10-26",
+    "Platform": "PlayStation 4"
+  },
+  {
+    "Title": "God of War",
+    "Release Date": "2018-04-20",
+    "Platform": "PlayStation 4"
+  },
+  {
+    "Title": "Elden Ring",
+    "Release Date": "2022-02-25",
+    "Platform": "PC"
+  },
+  {
+    "Title": "Cyberpunk 2077",
+    "Release Date": "2020-12-10",
+    "Platform": "PC"
+  },
+  {
+    "Title": "Half-Life 2",
+    "Release Date": "2004-11-16",
+    "Platform": "PC"
+  },
+  {
+    "Title": "Portal 2",
+    "Release Date": "2011-04-19",
+    "Platform": "PC"
+  },
+  {
+    "Title": "The Last of Us",
+    "Release Date": "2013-06-14",
+    "Platform": "PlayStation 3"
+  },
+  {
+    "Title": "Super Smash Bros. Ultimate",
+    "Release Date": "2018-12-07",
+    "Platform": "Nintendo Switch"
+  },
+  {
+    "Title": "Animal Crossing: New Horizons",
+    "Release Date": "2020-03-20",
+    "Platform": "Nintendo Switch"
+  },
+  {
+    "Title": "Overwatch",
+    "Release Date": "2016-05-24",
+    "Platform": "PC"
+  },
+  {
+    "Title": "Fortnite",
+    "Release Date": "2017-07-25",
+    "Platform": "PC"
+  },
+  {
+    "Title": "Dark Souls",
+    "Release Date": "2011-09-22",
+    "Platform": "PlayStation 3"
+  },
+  {
+    "Title": "Bloodborne",
+    "Release Date": "2015-03-24",
+    "Platform": "PlayStation 4"
+  },
+  {
+    "Title": "Sekiro: Shadows Die Twice",
+    "Release Date": "2019-03-22",
+    "Platform": "PC"
+  },
+  {
+    "Title": "Doom Eternal",
+    "Release Date": "2020-03-20",
+    "Platform": "PC"
+  },
+  {
+    "Title": "Halo: Combat Evolved",
+    "Release Date": "2001-11-15",
+    "Platform": "Xbox"
+  },
+  {
+    "Title": "Gears of War",
+    "Release Date": "2006-11-07",
+    "Platform": "Xbox 360"
+  },
+  {
+    "Title": "Final Fantasy VII",
+    "Release Date": "1997-01-31",
+    "Platform": "PlayStation"
+  },
+  {
+    "Title": "Resident Evil 4",
+    "Release Date": "2005-01-11",
+    "Platform": "GameCube"
+  },
+  {
+    "Title": "Metal Gear Solid",
+    "Release Date": "1998-09-03",
+    "Platform": "PlayStation"
+  },
+  {
+    "Title": "Pokémon Red and Blue",
+    "Release Date": "1996-02-27",
+    "Platform": "Game Boy"
+  },
+  {
+    "Title": "Super Mario 64",
+    "Release Date": "1996-06-23",
+    "Platform": "Nintendo 64"
+  },
+  {
+    "Title": "The Legend of Zelda: Ocarina of Time",
+    "Release Date": "1998-11-21",
+    "Platform": "Nintendo 64"
+  },
+  {
+    "Title": "Diablo II",
+    "Release Date": "2000-06-29",
+    "Platform": "PC"
+  },
+  {
+    "Title": "World of Warcraft",
+    "Release Date": "2004-11-23",
+    "Platform": "PC"
+  }
+]
