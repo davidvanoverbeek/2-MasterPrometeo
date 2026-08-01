@@ -5,6 +5,9 @@ require("dotenv").config();
 const express = require("express");
 const connect = require("./src/config/db");
 
+// Importamos utils
+const { generalErrors, routeNotFound } = require("./src/utils");
+
 // Conectamos la base de datos
 connect();
 
@@ -24,18 +27,10 @@ server.get("/", (req, res) => {
 });
 
 // Middelware de rutas nos encontradas
-server.use((req, res) => {
-    return res.status(404).json({
-        message: "Route Not Found",
-    });
-});
+server.use(routeNotFound);
 
 // Middleware de manejo de errores generales
-server.use((error, req, res) => {
-    return res.status(error.status || 500).json({
-        message: error.message || "Error interno del servidor",
-    });
-});
+server.use(generalErrors);
 
 // Levantamos y escuchamos el servidor
 server.listen(PORT, () => {
