@@ -5,7 +5,7 @@ const createError = require("../../utils");
 const getAllConsoles = async (req, res, next) => {
     try {
         const consoles = await Console.find();
-        return res.status(200).son(consoles);
+        return res.status(200).json(consoles);
     } catch (error) {
         return next(error);
     }
@@ -26,6 +26,39 @@ const getConsoleByID = async (req, res, next) => {
         return next(error);
     }
 };
+
+// GET CONSOLES BY BRAND
+const getConsoleByBrand = async (req, res, next) => {
+    try {
+        const { brand } = req.params;
+        const consoles = await Console.find({ brand });
+        return res.status(200).json(consoles);
+    } catch (error) {
+        return next(error);
+    }
+};
+
+// GET CONSOLES BY TYPE
+const getConsoleByType = async (req, res, next) => {
+    try {
+        const { type } = req.params;
+        const consoles = await Console.find({ type });
+        return res.status(200).json(consoles);
+    } catch (error) {
+        return next(error);
+    }
+};
+
+// GET CONSOLES RELEASED AFTER YEAR
+const getConsolesAfterYear = async (req, res, next) => {
+    try {
+        const { year } = req.params;
+        const consoles = await Console.find({ releaseYear: { $gt: year }});
+        return res.status(200).json(consoles);
+    } catch (error) {
+        return next(error);
+    }
+}
 
 // CREATE CONSOLE
 const createConsole = async (req, res, next) => {
@@ -74,7 +107,10 @@ const updateConsole = async (req, res, next) => {
 
 module.exports = {
     getAllConsoles, 
-    getConsoleByID, 
+    getConsoleByID,
+    getConsoleByBrand,
+    getConsoleByType,
+    getConsolesAfterYear, 
     createConsole, 
     deleteConsole, 
     updateConsole

@@ -5,6 +5,9 @@ require("dotenv").config();
 const express = require("express");
 const connect = require("./src/config/db");
 
+// Importamos los routers
+const consolesRoutes = require("./src/api/routes/consoles.routes");
+
 // Importamos utils
 const { generalErrors, routeNotFound } = require("./src/utils");
 
@@ -25,6 +28,9 @@ server.get("/", (req, res) => {
         message: "API REST de videojuegos",
     });
 });
+
+// Rutas de la API REST
+server.use("/api/v1/consoles", consolesRoutes);
 
 // Middelware de rutas nos encontradas
 server.use(routeNotFound);
