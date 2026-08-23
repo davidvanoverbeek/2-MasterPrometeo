@@ -5,6 +5,7 @@ const createError = require("../../utils");
 const getAllConsoles = async (req, res, next) => {
     try {
         const consoles = await Console.find();
+        
         return res.status(200).json(consoles);
     } catch (error) {
         return next(error);
@@ -32,6 +33,7 @@ const getConsoleByBrand = async (req, res, next) => {
     try {
         const { brand } = req.params;
         const consoles = await Console.find({ brand });
+        
         return res.status(200).json(consoles);
     } catch (error) {
         return next(error);
@@ -43,6 +45,7 @@ const getConsoleByType = async (req, res, next) => {
     try {
         const { type } = req.params;
         const consoles = await Console.find({ type });
+        
         return res.status(200).json(consoles);
     } catch (error) {
         return next(error);
@@ -54,6 +57,7 @@ const getConsolesAfterYear = async (req, res, next) => {
     try {
         const { year } = req.params;
         const consoles = await Console.find({ releaseYear: { $gt: year }});
+        
         return res.status(200).json(consoles);
     } catch (error) {
         return next(error);
@@ -65,6 +69,7 @@ const createConsole = async (req, res, next) => {
     try {
         const newConsole = new Console(req.body);
         const createdConsole = await newConsole.save();
+        
         return res.status(201).json(createdConsole);
     } catch (error) {
         return next(error);

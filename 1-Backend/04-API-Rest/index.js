@@ -7,6 +7,7 @@ const connect = require("./src/config/db");
 
 // Importamos los routers
 const consolesRoutes = require("./src/api/routes/consoles.routes");
+const videogamesRoutes = require("./src/api/routes/videogames.routes");
 
 // Importamos utils
 const { generalErrors, routeNotFound } = require("./src/utils");
@@ -31,6 +32,8 @@ server.get("/", (req, res) => {
 
 // Rutas de la API REST
 server.use("/api/v1/consoles", consolesRoutes);
+server.use("/api/v1/videogames", videogamesRoutes);
+
 
 // Middelware de rutas nos encontradas
 server.use(routeNotFound);
