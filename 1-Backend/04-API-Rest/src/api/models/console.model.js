@@ -30,7 +30,7 @@ const consoleSchema = new mongoose.Schema(
         brand: {type: String, required: true, enum: BRANDS},
         releaseYear: {type: Number, min: 1990, max: 2100},
         type: {type: String, enum: CONSOLE_TYPES, default: "Home"},
-        mediaFormat: {tpye: String, enum: MEDIA_FORMATS, default: "Mixed"},
+        mediaFormat: {type: String, enum: MEDIA_FORMATS, default: "Mixed"},
         image: {type: String, default: "https://res.cloudinary.com/jz0ksn1g/image/upload/v1785542098/600x400_wtp7v9.png"},
         storage: {type: Number, min: 0, default: 500},
     },

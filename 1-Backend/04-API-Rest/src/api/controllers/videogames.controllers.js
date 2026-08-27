@@ -4,7 +4,7 @@ const createError = require("../../utils/createError");
 // GET ALL VIDEOGAMES
 const getAllVideogames = async (req, res, next) => {
     try {
-        const videogames = await Videogame.find();
+        const videogames = await Videogame.find().populate("consoles");
         
         return res.status(200).json(videogames);
     } catch (error) {
@@ -16,7 +16,7 @@ const getAllVideogames = async (req, res, next) => {
 const getVideogamesByID = async (req, res, next)  => {
     try {
         const { id } = req.params;
-        const videogame = await Videogame.findById(id);
+        const videogame = await Videogame.findById(id).populate("consoles");
 
         if (!videogame) {
             return next(createError("Videogame not found", 404));
@@ -32,7 +32,7 @@ const getVideogamesByID = async (req, res, next)  => {
 const getVideogamesByGenre = async(req, res, next) => {
     try {
         const { genre } = req.params;
-        const videogames = await Videogame.find({ genre });
+        const videogames = await Videogame.find({ genre }).populate("consoles");
         
         return res.status(200).json(videogames);
     } catch (error) {
@@ -44,7 +44,7 @@ const getVideogamesByGenre = async(req, res, next) => {
 const getVideogamesByConsole = async(req, res, next) => {
     try {
         const { consoleId } = req.params;
-        const videogames = await Videogame.find({ consoles: consoleId });
+        const videogames = await Videogame.find({ consoles: consoleId }).populate("consoles");
         
         return res.status(200).json(videogames);
     } catch (error) {

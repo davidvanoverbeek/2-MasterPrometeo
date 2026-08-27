@@ -7,10 +7,12 @@ const GENRES = [
     "Shooter",
     "Strategy",
     "Sports",
-    "Racings",
+    "Racing",
     "Indie",
     "Puzzle",
     "Horror",
+    "Platform",
+    "Simulation",
     "Other"
 ];
 
@@ -19,7 +21,7 @@ const PEGI_VALUES = [3, 7, 12, 16, 18]
 const videogameSchema = new mongoose.Schema(
     {
         title: {type: String, required: true, trim: true},
-        studio: {type: String, trim: true, default: "Unknown Studio"},
+        studio: {type: String, trim: true, default: "Unknown Studios"},
         releaseYear: {type: Number, min: 1990, max: 2100},
         genre: {type: String, enum: GENRES, defult: "Other"},
         pegi: {type: Number, enum: PEGI_VALUES, default: 12},
