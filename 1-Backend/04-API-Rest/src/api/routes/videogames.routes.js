@@ -1,5 +1,6 @@
 const express = require("express");
 const router = express.Router();
+const isAuth = require("../../middlewares/auth.middleware");
 
 const {
     getAllVideogames,
@@ -10,7 +11,8 @@ const {
 } = require("../controllers/videogames.controllers");
 
 router.get("/", getAllVideogames);
-router.get("/id/:id", getVideogamesByID);
+// hemos protegido la ruta con autenticacion
+router.get("/id/:id", [isAuth], getVideogamesByID);
 router.get("/genre/:genre", getVideogamesByGenre);
 router.get("/console/:consoleId", getVideogamesByConsole);
 router.post("/", createVideogame);
