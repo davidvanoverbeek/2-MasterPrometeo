@@ -1,49 +1,49 @@
 const mongoose = require("mongoose");
 
 const GENRES = [
-    "Action",
-    "Adventure",
-    "RPG",
-    "Shooter",
-    "Strategy",
-    "Sports",
-    "Racing",
-    "Indie",
-    "Puzzle",
-    "Horror",
-    "Platform",
-    "Simulation",
-    "Other"
+  "Action",
+  "Adventure",
+  "RPG",
+  "Shooter",
+  "Sports",
+  "Racing",
+  "Strategy",
+  "Simulation",
+  "Platform",
+  "Puzzle",
+  "Horror",
+  "Indie",
+  "Other",
 ];
 
-const PEGI_VALUES = [3, 7, 12, 16, 18]
+const PEGI_VALUES = [3, 7, 12, 16, 18];
 
 const videogameSchema = new mongoose.Schema(
-    {
-        title: {type: String, required: true, trim: true},
-        studio: {type: String, trim: true, default: "Unknown Studios"},
-        releaseYear: {type: Number, min: 1990, max: 2100},
-        genre: {type: String, enum: GENRES, default: "Other"},
-        pegi: {type: Number, enum: PEGI_VALUES, default: 12},
-        price: {type: Number, min: 0, default: 0},
-        rating: {type: Number, min: 0, max: 10, default: 0},
-        multiplayer: {type: Boolean, default: false},
-        stock: {type: Number, min: 0, default: 0},
-        cover: {type: String, default: "https://res.cloudinary.com/jz0ksn1g/image/upload/v1785347741/400x600_mwhpuf.png"},
-        consoles: [
-            {
-                type: mongoose.Schema.Types.ObjectId,
-                ref: "Console",
-                required: true
-            },
-        ],
+  {
+    title: { type: String, required: true, trim: true },
+    studio: { type: String, trim: true, default: "Unknown Studio" },
+    releaseYear: { type: Number, min: 1990, max: 2100 },
+    genre: { type: String, enum: GENRES, default: "Other" },
+    pegi: { type: Number, enum: PEGI_VALUES, default: 12 },
+    price: { type: Number, min: 0, default: 0 },
+    rating: { type: Number, min: 0, max: 10, default: 0 },
+    multiplayer: { type: Boolean, default: false },
+    stock: { type: Number, min: 0, default: 0 },
+    cover: {
+      type: String,
+      default:
+        "https://res.cloudinary.com/dwkafwila/image/upload/v1772654099/400x600_lwcdfb.png",
     },
-    {
-        timestamps: true,
-        versionKey: false
-    },
+    consoles: [
+      { type: mongoose.Schema.Types.ObjectId, ref: "Console", required: true },
+    ],
+  },
+  {
+    timestamps: true,
+    versionKey: false,
+  },
 );
 
-const Videogame = new mongoose.model("Videogame", videogameSchema);
+const Videogame = mongoose.model("Videogame", videogameSchema);
 
 module.exports = Videogame;
