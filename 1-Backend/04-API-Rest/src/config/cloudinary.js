@@ -1,17 +1,10 @@
-require("dotenv").config();
+const cloudinary = require("cloudinary").v2;
 
-const FormData = require("form-data");
-const fs = require("fs");
-const fetch = require("node-fetch");
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRET,
+  signature_algorithm: "sha256",
+});
 
-const form = new FormData();
-form.append("file", fs.createReadStream("../../../../../../Escritorio/WORK/Alejandro Ortega/img/Foto-Entrenador.jpg"));
-form.append("upload_preset", "test_unsigned");
-
-fetch(`https://api.cloudinary.com/v1_1/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload`, {
-  method: "POST",
-  body: form,
-})
-  .then(res => res.json())
-  .then(data => console.log("RESPUESTA:", data))
-  .catch(err => console.error("ERROR:", err));
+module.exports = cloudinary;
