@@ -23,7 +23,7 @@ const videogameSchema = new mongoose.Schema(
         title: {type: String, required: true, trim: true},
         studio: {type: String, trim: true, default: "Unknown Studios"},
         releaseYear: {type: Number, min: 1990, max: 2100},
-        genre: {type: String, enum: GENRES, defult: "Other"},
+        genre: {type: String, enum: GENRES, default: "Other"},
         pegi: {type: Number, enum: PEGI_VALUES, default: 12},
         price: {type: Number, min: 0, default: 0},
         rating: {type: Number, min: 0, max: 10, default: 0},
