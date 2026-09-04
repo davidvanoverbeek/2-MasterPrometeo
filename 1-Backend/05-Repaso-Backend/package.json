@@ -1,0 +1,22 @@
+{
+  "name": "05-repaso-backend",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js"
+  },
+  "keywords": [],
+  "author": "David Antonio van Overbeek Crusells (https://davidvanoverbeek.netlify.app/)",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "cloudinary": "^1.41.3",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.9.4",
+    "multer": "^2.3.0",
+    "multer-storage-cloudinary": "^4.0.0"
+  }
+}
