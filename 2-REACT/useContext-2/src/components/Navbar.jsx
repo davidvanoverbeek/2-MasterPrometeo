@@ -11,9 +11,15 @@ const Navbar = () => {
 		<nav>
 			<h1>Navbar</h1>
 			<p>Nº elemento en el carrito: {carrito.length}</p>
-			{user ? <p>Welcome {user.name}</p> : <p>Please, log in</p>}
+			{user ? (
+				<>
+					<p>Welcome {user.name}</p>
+					<button onClick={logout}>Logout</button>
+				</>
+			) : (
+				<p>Please, log in</p>
+			)}
 			{user && <button onClick={logout}>Logout</button>}
-			{!user && <Login />}
 		</nav>
 	);
 };
